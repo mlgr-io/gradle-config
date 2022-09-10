@@ -89,7 +89,7 @@ jobs:
 
       - uses: gradle/gradle-build-action@v2.2.5
         with:
-          arguments: publishAllPublicationsToMavenCentralRepository
+          arguments: publish
 
       - name: Clean up
         run: |
