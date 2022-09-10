@@ -47,6 +47,8 @@
     <a href="https://github.com/mlgr-io/gradle-config/issues">Report Bug</a>
     ·
     <a href="https://github.com/mlgr-io/gradle-config/issues">Request Feature</a>
+    ·
+    <a href="CHANGELOG.md">Changelog</a>
   </p>
 </div>
 
