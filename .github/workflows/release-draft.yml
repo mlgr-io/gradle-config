@@ -33,7 +33,7 @@ jobs:
 
       # This step will differ depending on your project setup
       - name: Bump version in package.json
-        run: echo "version=${{ github.event.inputs.version }}" > gradle.properties
+        run: sed -r -i 's/version=([0-9a-zA-Z.-]+)/version=${{ github.event.inputs.version }}/g' gradle.properties
 
       - name: Commit changelog and manifest files
         id: make-commit
