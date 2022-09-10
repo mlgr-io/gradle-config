@@ -11,5 +11,5 @@ object Versions {
     const val junitJupiter = "5.9.0"
     const val kotest = "5.4.2"
     const val ktlint = "11.0.0"
-    const val mavenPublish = "0.21.0"
+    const val mavenPublish = "0.22.0"
 }
