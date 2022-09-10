@@ -47,6 +47,8 @@
     <a href="https://github.com/mlgr-io/gradle-config/issues">Report Bug</a>
     ·
     <a href="https://github.com/mlgr-io/gradle-config/issues">Request Feature</a>
+    ·
+    <a href="CHANGELOG.md">Changelog</a>
   </p>
 </div>
 
@@ -110,7 +112,7 @@ repositories {
 }
 
 plugins {
-    id("io.mailguru.gradle-config") version "1.0.1"
+    id("io.mailguru.gradle-config") version "1.0.2"
 }
 ```
 
@@ -123,7 +125,7 @@ repositories {
 }
 
 plugins {
-    id("io.mailguru.gradle-config") version "1.0.1"
+    id("io.mailguru.gradle-config") version "1.0.2"
 }
 
 detekt {

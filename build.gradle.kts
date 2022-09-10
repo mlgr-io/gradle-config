@@ -1,4 +1,3 @@
-import com.vanniktech.maven.publish.MavenPublishBaseExtension
 import com.vanniktech.maven.publish.SonatypeHost
 
 buildscript {
@@ -62,41 +61,37 @@ detekt {
     allRules = true
 }
 
-plugins.withId("com.vanniktech.maven.publish.base") {
-    configure<MavenPublishBaseExtension> {
-        publishToMavenCentral(SonatypeHost.S01)
-        signAllPublications()
-        pom {
-            name.set(project.name)
-            description.set("Gradle plugin for sharing versioning and configuration across independent projects.")
-            url.set("https://github.com/mlgr-io/gradle-config")
-            licenses {
-                license {
-                    name.set("GNU General Public License, Version 3")
-                    url.set("https://www.gnu.org/licenses/gpl-3.0.txt")
-                }
-            }
-            developers {
-                developer {
-                    name.set("Sascha Weyers")
-                    email.set("sw@mailguru.io")
-                    organization.set("mailguru UG (haftungsbeschränkt)")
-                    organizationUrl.set("https://mailguru.io")
-                }
-            }
-            scm {
-                connection.set("scm:git:git://github.com/mlgr-io/gradle-config.git")
-                developerConnection.set("scm:git:ssh://github.com:mlgr-io/gradle-config.git")
-                url.set("https://github.com/mlgr-io/gradle-config")
+mavenPublishing {
+    publishToMavenCentral(SonatypeHost.S01)
+    signAllPublications()
+    pom {
+        url.set("https://github.com/mlgr-io/gradle-config")
+        licenses {
+            license {
+                name.set("GNU General Public License, Version 3")
+                url.set("https://www.gnu.org/licenses/gpl-3.0.txt")
             }
         }
-        repositories {
-            maven {
-                url = if (version.toString().endsWith("SNAPSHOT")) {
-                    uri(layout.buildDirectory.dir("repos/snapshots"))
-                } else {
-                    uri(layout.buildDirectory.dir("repos/releases"))
-                }
+        developers {
+            developer {
+                name.set("Sascha Weyers")
+                email.set("sw@mailguru.io")
+                organization.set("mailguru UG (haftungsbeschränkt)")
+                organizationUrl.set("https://mailguru.io")
+            }
+        }
+        scm {
+            connection.set("scm:git:git://github.com/mlgr-io/gradle-config.git")
+            developerConnection.set("scm:git:ssh://github.com:mlgr-io/gradle-config.git")
+            url.set("https://github.com/mlgr-io/gradle-config")
+        }
+    }
+    repositories {
+        maven {
+            url = if (version.toString().endsWith("SNAPSHOT")) {
+                uri(layout.buildDirectory.dir("repos/snapshots"))
+            } else {
+                uri(layout.buildDirectory.dir("repos/releases"))
             }
         }
     }
