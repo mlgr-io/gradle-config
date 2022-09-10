@@ -112,7 +112,7 @@ repositories {
 }
 
 plugins {
-    id("io.mailguru.gradle-config") version "1.0.1"
+    id("io.mailguru.gradle-config") version "1.0.2"
 }
 ```
 
@@ -125,7 +125,7 @@ repositories {
 }
 
 plugins {
-    id("io.mailguru.gradle-config") version "1.0.1"
+    id("io.mailguru.gradle-config") version "1.0.2"
 }
 
 detekt {
