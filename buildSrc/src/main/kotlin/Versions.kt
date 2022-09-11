@@ -12,4 +12,5 @@ object Versions {
     const val kotest = "5.4.2"
     const val ktlint = "11.0.0"
     const val mavenPublish = "0.22.0"
+    const val mockk = "1.12.7"
 }

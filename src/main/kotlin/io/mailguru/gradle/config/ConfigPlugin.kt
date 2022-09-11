@@ -85,6 +85,7 @@ class ConfigPlugin : DependencyResolutionListener, Plugin<Project> {
                     String.format(Locale.ROOT, "io.kotest:kotest-runner-junit5:%s", Versions.kotest),
                     "org.jetbrains.kotlin:kotlin-test-junit5",
                     String.format(Locale.ROOT, "org.junit.jupiter:junit-jupiter:%s", Versions.junitJupiter),
+                    String.format(Locale.ROOT, "io.mockk:mockk:%s", Versions.mockk),
                 ),
             ).forEach { entry ->
                 entry.value.forEach {
