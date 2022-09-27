@@ -11,7 +11,7 @@ plugins {
 
     id("java-gradle-plugin")
     id("com.vanniktech.maven.publish") version Versions.mavenPublish
-    id("io.gitlab.arturbosch.detekt") version Versions.detekt
+    id("io.gitlab.arturbosch.detekt") version 1.21.0
     id("org.jlleitschuh.gradle.ktlint") version Versions.ktlint
 }
 
