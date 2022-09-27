@@ -7,7 +7,7 @@ buildscript {
 }
 
 plugins {
-    kotlin("jvm") version Versions.kotlin
+    kotlin("jvm") version 1.7.10
 
     id("java-gradle-plugin")
     id("com.vanniktech.maven.publish") version Versions.mavenPublish
