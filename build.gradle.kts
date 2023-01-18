@@ -10,7 +10,7 @@ plugins {
     kotlin("jvm") version Versions.kotlin
 
     id("java-gradle-plugin")
-    id("com.vanniktech.maven.publish") version Versions.mavenPublish
+    id("com.vanniktech.maven.publish") version 0.23.2
     id("io.gitlab.arturbosch.detekt") version Versions.detekt
     id("org.jlleitschuh.gradle.ktlint") version Versions.ktlint
 }
